@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  padding: 0;
+  margin: 0;
+
+  height: 100%;
+
+  background: #020121;
+  background: linear-gradient(90deg, rgba(2, 1, 33, 1) 0%, rgba(22, 22, 46, 1) 35%, rgba(26, 7, 11, 1) 100%);
+
+  color: aliceblue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Finger Paint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: #16162E;
+  padding: 1rem;
+  flex: 1;
+
+  @media (min-width: 512px) {
+    border: 1px groove aliceblue;
+    border-radius: 1rem;
+    margin: 2rem;
+  }
+}

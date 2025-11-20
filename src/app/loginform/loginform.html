@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()">
+    <div class="input-container">
+      <div>
+        <span>Email</span>
+        <input type="text" autocomplete="email" [formControl]="form.controls.email"/>
+      </div>
+      <div>
+        <span>Password</span>
+        <input id="password" type="password" autocomplete="current-password" [formControl]="form.controls.password">
+      </div>
+    </div>
+    <button type="submit" [disabled]="!canSubmit()">Log in</button>
+  </form>
+</div>

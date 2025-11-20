@@ -1,0 +1,38 @@
+{
+  "standard": "WCAG2AA",
+  "includeNotices": true,
+  "includeWarnings": true,
+  "runners": [
+    "htmlcs",
+    "axe"
+  ],
+  "defaults": {
+    "reporters": [
+      "cli",
+      "pa11y-ci-reporter-html"
+    ]
+  },
+  "urls": [
+    {
+      "url": "http://localhost:4200/login",
+      "viewport": { "width": 320, "height": 480, "isMobile": true},
+      "actions": [
+        "set field input[type=text] to one@adnovum.com"
+      ]
+    },
+    {
+      "url": "http://localhost:4200/dashboard",
+      "actions": [
+        "screen capture example.png",
+        "set field input[type=text] to one@adnovum.com",
+        "set field #password to password123",
+        "click element button[type=submit]",
+        "wait for path to not be /login"
+      ]
+    },
+    {
+      "url": "https://auth.agov.admin.ch/SAML2/SSO/",
+      "viewport": { "width": 320, "height": 480, "isMobile": true}
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+:host {
+  height: 100%;
+  display: grid;
+  grid-template:
+    "header header" auto
+    "main aside" 1fr
+    "footer footer" auto / 1fr auto;
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside {
+    grid-area: aside;
+  }
+
+  footer {
+    grid-area: footer;
+    justify-self: center;
+  }
+}
