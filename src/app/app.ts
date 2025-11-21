@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {ComboboxComponent} from './combobox/combobox.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ComboboxComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

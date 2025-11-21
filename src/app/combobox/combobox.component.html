@@ -1,0 +1,13 @@
+<p>{{selectedItem()}}</p>
+<div class="chevron material-symbols-outlined" (click)="expand()">
+keyboard_arrow_down
+</div>
+
+
+@if (this.isExpanded()) {
+  <div class="selection-panel">
+    @for (item of ["one", "two", "three"]; track item) {
+      <span (click)="select(item)">{{ item }}</span>
+    }
+  </div>
+}

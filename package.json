@@ -8,7 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "pa11y": "pa11y localhost:4200 --runner axe",
-    "pa11y-ci": "pa11y-ci"
+    "pa11y-ci": "pa11y-ci",
+    "e2e": "ng e2e",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "prettier": {
     "printWidth": 100,
@@ -34,10 +37,15 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^20.3.10",
     "@angular/build": "^20.3.10",
     "@angular/cli": "^20.3.10",
     "@angular/compiler-cli": "^20.3.0",
+    "@cypress/schematic": "^4.1.4",
     "@types/jasmine": "~5.1.0",
+    "axe-core": "^4.11.0",
+    "cypress": "15.7.0",
+    "cypress-axe": "^1.7.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

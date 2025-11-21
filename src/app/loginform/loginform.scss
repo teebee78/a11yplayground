@@ -58,7 +58,7 @@
 
   @media (min-width: 512px) {
     grid-template:
-    "a" 120px
+    "a" 6vh
     "b" min-content
     "c" auto
    / minmax(240px, 450px);
