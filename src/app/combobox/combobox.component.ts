@@ -4,9 +4,10 @@ import {Component, signal} from '@angular/core';
   selector: 'app-combobox',
   imports: [],
   templateUrl: './combobox.component.html',
-  styleUrl: './combobox.component.css',
+  styleUrl: './combobox.component.scss',
   host: {
-    '[class.is-expanded]': 'this.isExpanded()'
+    '[class.is-expanded]': 'this.isExpanded()',
+    'role': 'combobox'
   }
 })
 export class ComboboxComponent {

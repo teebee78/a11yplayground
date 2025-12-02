@@ -3,9 +3,8 @@
 keyboard_arrow_down
 </div>
 
-
 @if (this.isExpanded()) {
-  <div class="selection-panel">
+  <div class="selection-panel" animate.enter="enter-animation" animate.leave="leave-animation">
     @for (item of ["one", "two", "three"]; track item) {
       <span (click)="select(item)">{{ item }}</span>
     }
