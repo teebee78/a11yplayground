@@ -1,35 +1,34 @@
 :host {
   min-width: 10rem;
-  border: 1px groove aliceblue;
-  border-radius: 0.5rem;
-  background-color: white;
-  outline: none;
-
-  color: black;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 0.5rem;
-
   position: relative;
 
-  p {
-    margin: 0.5rem;
-  }
+  div {
+    border: 1px groove aliceblue;
+    border-radius: 0.5rem;
+    background-color: white;
+    outline: none;
 
-  .chevron {
-    transition: transform 0.25s ease-in-out;
-  }
+    color: black;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 0.5rem;
+
+
+    p {
+      margin: 0.5rem;
+    }
+
+    .chevron {
+      transition: transform 0.25s ease-in-out;
+      border: 0;
+    }
+  }
 
   &.is-expanded {
-    border-bottom: none;
-    //border-bottom-left-radius: 0;
-    //border-bottom-right-radius: 0;
-    border-bottom-color: unset;
     .chevron {
       transform: rotate(180deg);
     }
@@ -37,20 +36,23 @@
 
   .selection-panel {
     position: absolute;
-    top:  calc(100% - 0.25rem);
-    left: -1px;
-    width: calc(100% + 2px);
+    top:  calc(100% - 0.5rem);
+    left: 0;
+    width: 100%;
     background-color: white;
-    border: 1px groove aliceblue;
+    border-left: 1px groove aliceblue;
+    border-right: 1px groove aliceblue;
+    border-bottom: 1px groove aliceblue;
+    border-top: 0;
     border-radius: 0 0 0.5em 0.5rem;
-    border-top-color: darkgray;
 
     display: flex;
     flex-direction: column;
 
-    padding: 0 0.5rem;
+    align-items: start;
 
-    //top: calc(100% - 0.5rem);
+    padding: 0 0.5rem;
+    overflow: hidden;
 
     span {
       margin: 0.5rem;
@@ -68,7 +70,7 @@
 
 @keyframes expand-vertically {
   from {
-    max-height: 0;
+    max-height: 0.5rem
   }
 
   to {
@@ -78,7 +80,7 @@
 
 @keyframes collapse-vertically {
   to {
-    max-height: 0;
+    max-height: 0.5rem;
   }
 
   from {

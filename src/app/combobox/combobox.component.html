@@ -1,6 +1,8 @@
-<p>{{selectedItem()}}</p>
-<div class="chevron material-symbols-outlined" (click)="expand()">
-keyboard_arrow_down
+<div>
+  <p>{{ selectedItem() }}</p>
+  <div class="chevron material-symbols-outlined" (click)="expand()">
+    keyboard_arrow_down
+  </div>
 </div>
 
 @if (this.isExpanded()) {
