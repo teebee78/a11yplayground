@@ -1,0 +1,10 @@
+<h2>Bucket</h2>
+@if (bucketStore.items().length) {
+  <ul>
+    @for (item of bucketStore.sortedItems(); track item) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+} @else {
+  <p>No items yet</p>
+}

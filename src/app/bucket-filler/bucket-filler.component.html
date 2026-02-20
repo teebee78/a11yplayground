@@ -1,0 +1,15 @@
+<h2>Add to Bucket</h2>
+<form (submit)="onAddItem($event)">
+  <div class="inpt-container">
+    <label>Item</label>
+    <input type="text" [formField]="bucketItemForm.name">
+    @if (bucketItemForm.name().invalid()) {
+      <div class="error">
+        @for (error of bucketItemForm.name().errors(); track error.kind) {
+          <span>{{ error.message }}</span>
+        }
+      </div>
+    }
+  </div>
+  <button type="submit">Add To Bucket</button>
+</form>
